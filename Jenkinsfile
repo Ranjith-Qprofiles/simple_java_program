@@ -1,11 +1,11 @@
 pipeline{
     agent any
     stages{
-        stage("Check Out"){
-            steps{
-                git url: "https://github.com/Ranjith-Qprofiles/DevOpsClassCodes.git"
-            }
-        }
+        // stage("Check Out"){
+        //     steps{
+        //         git url: "https://github.com/Ranjith-Qprofiles/DevOpsClassCodes.git"
+        //     }
+        // }
         stage("Code-Compile"){
             steps{
                 sh 'mvn compile'
