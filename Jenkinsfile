@@ -13,11 +13,13 @@ pipeline{
         stage("Test"){
             steps{
                 echo "Tesing a Application"
+                echo "Building Version is ${NEW_VERSION}"
             }
         }
         stage("Deploy"){
             steps{
                 echo "Deploying a Application"
+                echo "Building Version is ${NEW_VERSION}"
             }
         }
     }
