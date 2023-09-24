@@ -4,10 +4,10 @@ pipeline{
         NEW_VERSION = '1.3.0'
     }
     stages{
-        stage("Build"){
+        stage("Build"){ 
             steps{
                 echo "Building a Application"
-                echo 'Building Version is ${NEW_VERSION}'
+                echo "Building Version is ${NEW_VERSION}"
             }
         }
         stage("Test"){
