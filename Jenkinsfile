@@ -17,4 +17,15 @@ pipeline{
             }
         }
     }
+    post{
+        success {
+            ls -lrt 
+        }
+        failure{
+            echo "Build Failure"
+        }
+        always{
+            pwd
+        }
+    }
 }
