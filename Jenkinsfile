@@ -25,7 +25,7 @@ pipeline{
             echo "Failure Build"
         }
         always{
-            echo "Alway send a Mail to Developes
+            echo "Alway send a Mail to Developers"
         }
     }
 }
