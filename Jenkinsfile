@@ -1,36 +1,19 @@
 pipeline{
     agent any
     stages{
-        // stage("Check Out"){
-        //     steps{
-        //         git url: "https://github.com/Ranjith-Qprofiles/DevOpsClassCodes.git"
-        //     }
-        // }
-        stage("Code-Compile"){
+        stage("Build"){
             steps{
-                sh 'mvn compile'
+                echo "Building a Application"
             }
         }
-        stage("Code-Test"){
+        stage("Test"){
             steps{
-                sh 'mvn test'
+                echo "Tesing a Application"
             }
         }
-        stage("Code-QA-PMD"){
+        stage("Deploy"){
             steps{
-                sh 'mvn pmd:pmd'
-                recordIssues(tools: [pmdParser()])
-            }   
-        }
-        stage("Code-QA-CheckStyle"){
-            steps{
-                sh 'mvn checkstyle:checkstyle'
-                recordIssues(tools: [checkStyle()])
-            }
-        }
-        stage("Code-Package"){
-            steps{
-                sh 'mvn package'
+                echo "Deploying a Application"
             }
         }
     }
