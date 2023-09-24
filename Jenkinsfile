@@ -19,13 +19,13 @@ pipeline{
     }
     post{
         success {
-            ls -lrt 
+            echo "Success Build"
         }
         failure{
-            echo "Build Failure"
+            echo "Failure Build"
         }
         always{
-            pwd
+            echo "Alway send a Mail to Developes
         }
     }
 }
