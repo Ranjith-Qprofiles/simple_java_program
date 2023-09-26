@@ -33,15 +33,15 @@ pipeline{
             }
         }
     }
-    // post{
-    //     success {
-    //         echo "Success Build"
-    //     }
-    //     failure{
-    //         echo "Failure Build"
-    //     }
-    //     always{
-    //         echo "Alway send a Mail to Developers"
-    //     }
-   // }
+    post{
+        success {
+            echo "Success Build"
+        }
+        failure{
+            echo "Failure Build"
+        }
+        always{
+            echo "Alway send a Mail to Developers"
+        }
+   }
 }
