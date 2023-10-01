@@ -5,13 +5,13 @@ pipeline{
     //     booleanParam(name: 'executeTestStage', defaultValue: true, description: '')
     // }
     environment {
-        NEW_VERSION = '1.3.0'
+        NEW_VERSION_NO = '1.3.0'
     }
     stages{
         stage("Build"){ 
             steps{
                 echo "Building a Application"
-               echo "Building Version is ${NEW_VERSION}"
+               echo "Building Version is ${NEW_VERSION_NO}"
             }
         }
         stage("Test"){
@@ -22,7 +22,7 @@ pipeline{
             // }
             steps{
                 echo "Tesing a Application"
-             //   echo "Building Version is ${NEW_VERSION}"
+             //   echo "Building Version is ${NEW_VERSION_NO}"
             }
         }
         stage("Deploy"){
